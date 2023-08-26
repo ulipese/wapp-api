@@ -1,0 +1,5 @@
+package com.wapp.Wapp.controller;
+
+public class LocalController {
+
+}

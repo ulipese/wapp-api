@@ -1,0 +1,20 @@
+package com.wapp.Wapp.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.wapp.Wapp.entities.Local;
+import com.wapp.Wapp.entities.Weather;
+
+@RestController
+@RequestMapping("/weather/")
+public class WeatherController {
+	
+	@GetMapping
+	public Weather getWeather(@RequestParam(value = "cityName", defaultValue = "Sao Paulo") String cityName) {
+		return new Weather(cityName);
+	}
+	
+}
