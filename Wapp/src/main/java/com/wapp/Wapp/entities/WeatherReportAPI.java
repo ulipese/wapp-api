@@ -9,14 +9,16 @@ import java.io.UnsupportedEncodingException;
 
 public class WeatherReportAPI {
 	private String apiId = "f987b5c27bc5c459a4efdea8310dc15a";
-	private String uri = "https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s";
+	private String units = "metric";
+	private String uri = "https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s&units=%s";
 	
 	public WeatherReportAPI() {
 		
 	}
 	public String callWeatherApi(String cityName) throws UnsupportedEncodingException {		
 		HttpRequest request = HttpRequest.newBuilder()
-				.uri(URI.create(String.format(uri, URLEncoder.encode(cityName, "UTF-8"), apiId)))
+				.header("Content-Type", "application/json")
+				.uri(URI.create(String.format(uri, URLEncoder.encode(cityName, "UTF-8"), apiId, units)))
 				.method("GET", HttpRequest.BodyPublishers.noBody())
 				.build();
 		

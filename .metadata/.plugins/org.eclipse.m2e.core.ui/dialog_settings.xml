@@ -3,6 +3,7 @@
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
 			<item value="C:\Users\55119\Desktop\Wapp\Wapp"/>
+			<item value="C:\Users\55119\Desktop\Wapp"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
