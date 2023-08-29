@@ -17,8 +17,9 @@ import com.wapp.Wapp.entities.Weather;
 public class WeatherController {
 	
 	@GetMapping
-	public String getWeather(@PathVariable String cityName) throws UnsupportedEncodingException {
-		return new Weather().getWeather(cityName.toLowerCase());
+	public Object Weather(@PathVariable String cityName) throws UnsupportedEncodingException {
+		Weather Weather = new Weather(cityName.toLowerCase());
+		return Weather;
 		
 	}
 	
