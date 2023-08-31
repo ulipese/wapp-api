@@ -17,8 +17,8 @@ public class WeatherReportAPI {
 	}
 	public String callWeatherApi(String cityName) throws UnsupportedEncodingException {		
 		HttpRequest request = HttpRequest.newBuilder()
-				.header("Content-Type", "application/json")
 				.uri(URI.create(String.format(uri, URLEncoder.encode(cityName, "UTF-8"), apiId, units)))
+				.header("Content-Type", "application/json")
 				.method("GET", HttpRequest.BodyPublishers.noBody())
 				.build();
 		

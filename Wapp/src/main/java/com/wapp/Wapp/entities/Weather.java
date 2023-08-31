@@ -3,11 +3,9 @@ package com.wapp.Wapp.entities;
 import java.io.UnsupportedEncodingException;
 
 public class Weather {
-	private String cityName;
 	
-	public Weather(String cityName) {
-		// TODO Auto-generated constructor stub
-		this.cityName = cityName;
+	public Weather() {
+		
 	}
 //	
 //	public String getDescription() {
@@ -35,7 +33,7 @@ public class Weather {
 //		this.temp = temp;
 //	}
 	
-	public String getWeather() throws UnsupportedEncodingException {
+	public String getWeather(String cityName) throws UnsupportedEncodingException {
 		return new WeatherReportAPI().callWeatherApi(cityName);
 	}
 	
