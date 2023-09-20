@@ -1,6 +1,7 @@
 package com.wapp.Wapp.entities;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.regex.Pattern;
 import java.net.URI;
 import java.net.URLEncoder;
 import java.net.http.HttpClient;
@@ -33,6 +34,7 @@ public class WeatherReportAPI {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+			
 			return response.body();
 		}
 		
